@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="gallery-container">
+    <input type="radio" name="gallery-filter" id="all" checked>
+    <input type="radio" name="gallery-filter" id="landscape">
+    <input type="radio" name="gallery-filter" id="portrait">
+    <input type="radio" name="gallery-filter" id="architecture">
+    
+    <header>
+      <h1>Image Gallery</h1>
+      <div class="filters">
+
+        <label for="all" class="filter-btn">All</label>
+        <label for="landscape" class="filter-btn">Landscapes</label>
+        <label for="portrait" class="filter-btn">Portraits</label>
+        <label for="architecture" class="filter-btn">Architecture</label>
+      </div>
+    </header>
+
+    <main class="gallery-grid">
+        
+        <article class="card" data-category="landscape">
+            <div class="card-image">
+                <img src="images/landscape1.jpg" alt="Mountain View">
+                <div class="overlay">
+                    <p class="description">A beautiful view of the mountains and its greenery.</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="title">Mountains</h3>
+                <span class="category-tag">Landscape</span>
+            </div>
+        </article>
+
+        <article class="card" data-category="architecture">
+            <div class="card-image">
+                <img src="images/architecture1.jpg" alt="Modern Building">
+                <div class="overlay">
+                    <p class="description">An photograph showcasing The Acropolis in Greece.</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="title">The Acropolis</h3>
+                <span class="category-tag">Architecture</span>
+            </div>
+        </article>
+
+                <article class="card" data-category="portrait">
+            <div class="card-image">
+                <img src="images/portrait1.jpg" alt="Modern Building">
+                <div class="overlay">
+                    <p class="description">A portrait taken in Autumn showcasing the beauty of a bareface.</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="title">Autumn Beauty</h3>
+                <span class="category-tag">Portrait</span>
+            </div>
+        </article>
+
+                <article class="card" data-category="landscape">
+            <div class="card-image">
+                <img src="images/landscape2.jpg" alt="Modern Building">
+                <div class="overlay">
+                    <p class="description">An image showing the reflection of a sunset on the mountain top.</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="title">Orange Mountain</h3>
+                <span class="category-tag">Landscape</span>
+            </div>
+        </article>
+
+
+                <article class="card" data-category="architecture">
+            <div class="card-image">
+                <img src="images/architecture2.jpg" alt="Modern Building">
+                <div class="overlay">
+                    <p class="description">A remote island located in the southeastern Pacific Ocean.</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="title">Easter Island</h3>
+                <span class="category-tag">Architecture</span>
+            </div>
+        </article>
+
+
+                <article class="card" data-category="portrait">
+            <div class="card-image">
+                <img src="images/portrait2.jpg" alt="Modern Building">
+                <div class="overlay">
+                    <p class="description">A portrait showcasing the beauty of Vitiligo.</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="title">Vitiligo</h3>
+                <span class="category-tag">Portrait</span>
+            </div>
+        </article>
+
+
+                <article class="card" data-category="landscape">
+            <div class="card-image">
+                <img src="images/landscape3.jpg" alt="Modern Building">
+                <div class="overlay">
+                    <p class="description">A mountain with a snowy top.</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="title">Ice Top</h3>
+                <span class="category-tag">Landscape</span>
+            </div>
+        </article>
+
+
+                <article class="card" data-category="architecture">
+            <div class="card-image">
+                <img src="images/architecture3.jpg" alt="Modern Building">
+                <div class="overlay">
+                    <p class="description">A massive, elliptical stone amphitheartre in central Rome, Italy, built between 72-80 AD.</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="title">The Colosseum</h3>
+                <span class="category-tag">Architecture</span>
+            </div>
+        </article>
+
+
+                <article class="card" data-category="portrait">
+            <div class="card-image">
+                <img src="images/portrait3.jpg" alt="Modern Building">
+                <div class="overlay">
+                    <p class="description">A portrait showcasing the beauty of beauty marks.</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="title">Beauty Marks</h3>
+                <span class="category-tag">Portrait</span>
+            </div>
+        </article>
+
+
+                <article class="card" data-category="landscape">
+            <div class="card-image">
+                <img src="images/landscape4.jpg" alt="Modern Building">
+                <div class="overlay">
+                    <p class="description">Untainted beautiful land.</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="title">Untainted Land</h3>
+                <span class="category-tag">Landscape</span>
+            </div>
+        </article>
+
+
+                <article class="card" data-category="architecture">
+            <div class="card-image">
+                <img src="images/architecture4.jpg" alt="Modern Building">
+                <div class="overlay">
+                    <p class="description">An 18th century fountain in the Trevi district in Rome, Italy.</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="title">The Trevi Fountain</h3>
+                <span class="category-tag">Architecture</span>
+            </div>
+        </article>
+
+
+                <article class="card" data-category="portrait">
+            <div class="card-image">
+                <img src="images/portrait4.jpg" alt="Modern Building">
+                <div class="overlay">
+                    <p class="description">A black and white Portrait showcasing the beauty of sharp features.</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="title">Sharp Features</h3>
+                <span class="category-tag">Portrait</span>
+            </div>
+        </article>
+
+
+
+        
+    </main>
+
+</body>
+</html>
