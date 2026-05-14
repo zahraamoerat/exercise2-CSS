@@ -1,0 +1,151 @@
+h1 {
+  text-align: center;
+  background-color: #b46f92;
+  color: rgb(255, 255, 255);
+}
+
+:root {
+    --primary: #2563eb;
+    --dark: #1e293b;
+    --light: #ffffff;
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light);
+    margin: 0;
+    padding: 2rem;
+}
+
+
+
+
+/*The filter buttons*/
+/* Hiding the radio circles */
+input[type="radio"] {
+display: none;
+}
+
+/* flex box row*/
+.filters {
+display: flex;
+gap: 10px;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+/* Active button */
+
+.gallery-container:has(#all:checked) [for="all"],
+.gallery-container:has(#landscape:checked) [for="landscape"],
+.gallery-container:has(#portrait:checked) [for="portrait"],
+.gallery-container:has(#architecture:checked) [for="architecture"] {
+background-color: #997ec5; 
+color: white;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.5rem;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: #997ec5;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: var(--transition);
+    font-weight: 600;
+    border-color: #997ec5;
+}
+/*filtering logic */
+
+.gallery-container:has(#landscape:checked) .card:not([data-category="landscape"]) {
+display: none;
+}
+
+.gallery-container:has(#portrait:checked) .card:not([data-category="portrait"]) {
+display: none;
+}
+
+.gallery-container:has(#architecture:checked) .card:not([data-category="architecture"]) {
+display: none;
+}
+
+ /*1 column for mobile*/
+.gallery-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 2 columns for tablet */
+@media (min-width: 768px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); } 
+}
+
+/* 4 columns for desktop*/
+@media (min-width: 1024px) {
+    .gallery-grid { grid-template-columns: repeat(4, 1fr); } 
+}
+
+/* Card layout grid*/
+.card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+/* Overlay & Hover Effects */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(181, 132, 221, 0.705);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.card:hover .overlay { opacity: 1; }
+.card:hover img { transform: scale(1.1); }
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.category-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--primary);
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #997ec5;
+}
